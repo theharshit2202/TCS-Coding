@@ -1,0 +1,22 @@
+def Closest_Integer_Divisible(X,Y):
+    remainder = X % Y
+    if remainder == 0:
+        return(X)
+    else :
+        for i in range (Y):
+            if ((X + i) %Y) == 0:
+             return X + i 
+            elif (( X - i) % Y) == 0:
+             return X - i
+                
+             
+    
+
+print("Enter the dividend followed by divisor :\n")
+arr = list(map(int, input().split()))
+print(arr)
+
+X = arr[0]
+Y = arr[1]
+result = Closest_Integer_Divisible(X,Y)
+print("Ae hega result :", result)
